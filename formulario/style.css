@@ -1,0 +1,633 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --ink: #17251f;
+    --muted: #6d7973;
+    --green: #236b4b;
+    --green-dark: #174b35;
+    --line: #e5eae6;
+    --bg: #f8faf8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    margin: 0;
+    background: white;
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, calc(100% - 44px));
+    margin: 0 auto;
+}
+
+/* CABEÇALHO */
+
+.topbar {
+    height: 76px;
+    background: white;
+    border-bottom: 1px solid #edf0ed;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-content,
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font: 800 20px 'Manrope', sans-serif;
+    letter-spacing: -0.8px;
+}
+
+.brand > span:last-child {
+    color: var(--green);
+}
+
+.brand-icon {
+    display: inline-grid;
+    place-items: center;
+    background: var(--green);
+    color: white;
+    width: 29px;
+    height: 29px;
+    border-radius: 9px;
+}
+
+.header-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--green);
+    padding: 11px 16px;
+    border: 1px solid #d7e5dc;
+    border-radius: 9px;
+}
+
+/* APRESENTAÇÃO */
+
+.hero {
+    background: linear-gradient(115deg, #f5faf6, #edf6ef);
+    padding: 76px 0 82px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 54px;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.65px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+    font-size: clamp(38px, 4.5vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -2.6px;
+    margin: 21px 0;
+}
+
+h1 span {
+    color: var(--green);
+}
+
+.hero-copy > p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #63716a;
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 14px 19px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 13px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--green-dark);
+}
+
+.btn-secondary {
+    background: white;
+    border: 1px solid #dfe8e1;
+    color: var(--ink);
+}
+
+.hero-visual {
+    min-height: 350px;
+    display: grid;
+    place-items: center;
+}
+
+.visual-main {
+    width: 280px;
+    height: 280px;
+    border-radius: 40% 60% 55% 45%;
+    background: linear-gradient(145deg, #286d4d, #16442f);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 30px 70px #1d5c3a2c;
+    position: relative;
+}
+
+.visual-center {
+    width: 96px;
+    height: 96px;
+    border-radius: 28px;
+    background: #f4faf5;
+    color: var(--green);
+    font: 800 56px 'Manrope', sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+.visual-label {
+    position: absolute;
+    bottom: 22px;
+    color: #ffffffb0;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+/* VAGAS */
+
+.section {
+    padding-top: 78px;
+    padding-bottom: 82px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    letter-spacing: -1.4px;
+    margin: 9px 0 0;
+}
+
+.section-heading > p,
+.table-description {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.job-card {
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    padding: 24px 22px 19px;
+    transition: 0.2s;
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px #183e2410;
+}
+
+.job-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.purple {
+    background: #eee8ff;
+    color: #7754bd;
+}
+
+.orange {
+    background: #fff0e2;
+    color: #c57732;
+}
+
+.blue {
+    background: #e4f1ff;
+    color: #3975b4;
+}
+
+.job-tag {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    color: #849188;
+}
+
+.job-card h3 {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.job-card > p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+    min-height: 61px;
+}
+
+.job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+    color: #64746a;
+    padding: 13px 0;
+    border-top: 1px solid #edf0ed;
+}
+
+.job-apply {
+    border: 0;
+    background: none;
+    padding: 10px 0 0;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* FORMULÁRIO */
+
+.application-section {
+    background: #f5f8f5;
+    padding: 80px 0;
+}
+
+.application-grid {
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.application-intro h2 {
+    font-size: 39px;
+    line-height: 1.2;
+    margin: 13px 0 17px;
+}
+
+.application-intro > p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.form-card {
+    background: white;
+    border: 1px solid #e6ece7;
+    border-radius: 17px;
+    padding: 30px;
+    box-shadow: 0 12px 40px #173b2408;
+}
+
+.form-title {
+    margin-bottom: 23px;
+}
+
+.form-title h3 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 17px;
+    min-width: 0;
+}
+
+.field label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #34453b;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #dfe6e0;
+    border-radius: 8px;
+    background: white;
+    color: var(--ink);
+    font-size: 12px;
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus {
+    border-color: #6b9d7d;
+    box-shadow: 0 0 0 3px #e8f3eb;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 5px 0 19px;
+}
+
+.consent input {
+    accent-color: var(--green);
+    margin-top: 2px;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+.form-message {
+    font-size: 12px;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+.form-message.success {
+    color: var(--green);
+}
+
+.form-message.error {
+    color: #b33b32;
+}
+
+.required-note,
+.privacy-note {
+    font-size: 10px;
+    color: #8b968e;
+}
+
+/* TABELA DE CANDIDATOS */
+
+.candidates-heading {
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.candidate-count {
+    background: #e5f1e8;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 9px 12px;
+    border-radius: 20px;
+}
+
+.table-description {
+    margin-bottom: 23px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 760px;
+    text-align: left;
+}
+
+thead {
+    background: #f5f8f5;
+}
+
+th {
+    font-size: 10px;
+    color: #627167;
+    padding: 15px 17px;
+}
+
+td {
+    font-size: 11px;
+    padding: 15px 17px;
+    border-top: 1px solid #edf0ed;
+    color: #4e5d53;
+}
+
+tbody tr:hover:not(.empty-row) {
+    background: #fbfdfb;
+}
+
+.empty-row td {
+    text-align: center;
+    padding: 38px 12px;
+    color: #8b968e;
+}
+
+.table-vaga {
+    display: inline-block;
+    background: #e8f3eb;
+    color: var(--green);
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* RODAPÉ */
+
+footer {
+    border-top: 1px solid #edf0ed;
+    padding: 24px 0;
+}
+
+.footer-content p,
+.footer-content > span {
+    font-size: 10px;
+    color: #7b877f;
+    margin: 0;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+    .hero-grid {
+        gap: 20px;
+    }
+
+    .application-grid {
+        gap: 30px;
+    }
+
+    .application-intro h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    .hero {
+        padding: 48px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        letter-spacing: -1.8px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 280px;
+    }
+
+    .section {
+        padding: 52px 0;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .job-card > p {
+        min-height: 0;
+    }
+
+    .application-section {
+        padding: 52px 0;
+    }
+
+    .application-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .application-intro h2 {
+        font-size: 31px;
+    }
+
+    .form-card {
+        padding: 21px 17px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .candidates-heading {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .footer-content {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .footer-content p {
+        order: 3;
+        width: 100%;
+    }
+}

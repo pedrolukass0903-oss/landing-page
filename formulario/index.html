@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conecta Estágios</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="container header-content">
+            <a href="#" class="brand">
+                <span class="brand-icon">✦</span>
+                conecta<span>estágios</span>
+            </a>
+
+            <a href="#inscricao" class="header-link">
+                Candidatar-se ↗
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div class="hero-copy">
+                    <span class="eyebrow">
+                        SEU FUTURO COMEÇA AQUI
+                    </span>
+
+                    <h1>
+                        Seu primeiro passo para uma
+                        <span>grande carreira.</span>
+                    </h1>
+
+                    <p>
+                        Encontre oportunidades de estágio,
+                        desenvolva suas habilidades e transforme
+                        seu potencial em experiência profissional.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#vagas" class="btn btn-primary">
+                            Explorar vagas ↓
+                        </a>
+
+                        <a href="#inscricao" class="btn btn-secondary">
+                            Cadastrar currículo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-main">
+                        <div class="visual-center">C</div>
+                        <span class="visual-label">
+                            CONSTRUA SEU FUTURO
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- VAGAS DISPONÍVEIS -->
+        <section id="vagas" class="section container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">OPORTUNIDADES</span>
+                    <h2>Vagas em destaque</h2>
+                </div>
+
+                <p>Escolha uma área que combine com você.</p>
+            </div>
+
+            <div class="jobs-grid">
+
+                <article class="job-card">
+                    <div class="job-icon purple">⌘</div>
+                    <span class="job-tag">TECNOLOGIA</span>
+
+                    <h3>Estágio em Desenvolvimento</h3>
+
+                    <p>
+                        Aprenda a criar soluções digitais
+                        ao lado de uma equipe experiente.
+                    </p>
+
+                    <div class="job-meta">
+                        <span>30h semanais</span>
+                        <span>Híbrido</span>
+                    </div>
+
+                    <button
+                        class="job-apply"
+                        data-vaga="Estágio em Desenvolvimento">
+                        Tenho interesse ↗
+                    </button>
+                </article>
+
+                <article class="job-card">
+                    <div class="job-icon orange">✎</div>
+                    <span class="job-tag">COMUNICAÇÃO</span>
+
+                    <h3>Estágio em Marketing</h3>
+
+                    <p>
+                        Participe de campanhas, criação de conteúdo
+                        e estratégias de marca.
+                    </p>
+
+                    <div class="job-meta">
+                        <span>30h semanais</span>
+                        <span>Presencial</span>
+                    </div>
+
+                    <button
+                        class="job-apply"
+                        data-vaga="Estágio em Marketing">
+                        Tenho interesse ↗
+                    </button>
+                </article>
+
+                <article class="job-card">
+                    <div class="job-icon blue">▤</div>
+                    <span class="job-tag">ADMINISTRAÇÃO</span>
+
+                    <h3>Estágio Administrativo</h3>
+
+                    <p>
+                        Desenvolva organização, comunicação
+                        e rotina de escritório.
+                    </p>
+
+                    <div class="job-meta">
+                        <span>20h semanais</span>
+                        <span>Presencial</span>
+                    </div>
+
+                    <button
+                        class="job-apply"
+                        data-vaga="Estágio Administrativo">
+                        Tenho interesse ↗
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE CADASTRO -->
+        <section id="inscricao" class="application-section">
+
+            <div class="container application-grid">
+
+                <div class="application-intro">
+                    <span class="eyebrow">VAMOS COMEÇAR?</span>
+
+                    <h2>
+                        Cadastre-se e dê o próximo passo.
+                    </h2>
+
+                    <p>
+                        Preencha seus dados e escolha a vaga
+                        de estágio desejada. Sua inscrição
+                        aparecerá na lista de candidatos.
+                    </p>
+                </div>
+
+                <form id="formCandidato" class="form-card">
+
+                    <div class="form-title">
+                        <h3>Inscrição para estágio</h3>
+                    </div>
+
+                    <div class="field">
+                        <label for="nome">Nome completo *</label>
+                        <input
+                            id="nome"
+                            name="nome"
+                            type="text"
+                            placeholder="Digite seu nome"
+                            required
+                            minlength="3">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="email">E-mail *</label>
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                placeholder="voce@email.com"
+                                required>
+                        </div>
+
+                        <div class="field">
+                            <label for="telefone">Telefone *</label>
+                            <input
+                                id="telefone"
+                                name="telefone"
+                                type="tel"
+                                placeholder="(00) 00000-0000"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="curso">Curso *</label>
+                            <input
+                                id="curso"
+                                name="curso"
+                                type="text"
+                                placeholder="Ex.: Multimídia"
+                                required>
+                        </div>
+
+                        <div class="field">
+                            <label for="semestre">Semestre *</label>
+
+                            <select id="semestre" name="semestre" required>
+                                <option value="">Selecione</option>
+                                <option>1º semestre</option>
+                                <option>2º semestre</option>
+                                <option>3º semestre</option>
+                                <option>4º semestre</option>
+                                <option>5º semestre</option>
+                                <option>6º semestre</option>
+                                <option>7º semestre</option>
+                                <option>8º semestre ou mais</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="vaga">Vaga desejada *</label>
+
+                        <select id="vaga" name="vaga" required>
+                            <option value="">Selecione uma vaga</option>
+                            <option>Estágio em Desenvolvimento</option>
+                            <option>Estágio em Marketing</option>
+                            <option>Estágio Administrativo</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="linkedin">
+                            LinkedIn ou portfólio (opcional)
+                        </label>
+
+                        <input
+                            id="linkedin"
+                            name="linkedin"
+                            type="url"
+                            placeholder="https://">
+                    </div>
+
+                    <label class="consent">
+                        <input type="checkbox" id="consentimento" required>
+
+                        <span>
+                            Confirmo que os dados informados estão
+                            corretos e autorizo seu uso para esta inscrição.
+                        </span>
+                    </label>
+
+                    <button
+                        class="btn btn-primary submit-btn"
+                        type="submit">
+                        Enviar candidatura →
+                    </button>
+
+                    <p
+                        class="form-message"
+                        id="mensagem"
+                        role="status"
+                        aria-live="polite">
+                    </p>
+
+                    <p class="required-note">
+                        * Campos obrigatórios
+                    </p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- TABELA DE CANDIDATOS -->
+        <section id="candidatos" class="section container">
+
+            <div class="section-heading candidates-heading">
+                <div>
+                    <span class="eyebrow">ACOMPANHAMENTO</span>
+                    <h2>Lista de candidatos</h2>
+                </div>
+
+                <span class="candidate-count" id="contador">
+                    0 inscrições
+                </span>
+            </div>
+
+            <p class="table-description">
+                Os candidatos cadastrados aparecerão automaticamente aqui.
+            </p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Curso</th>
+                            <th>Vaga desejada</th>
+                            <th>Contato</th>
+                            <th>Cadastro</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelaCandidatos">
+                        <tr class="empty-row">
+                            <td colspan="6">
+                                Nenhum candidato cadastrado ainda.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="privacy-note">
+                Demonstração acadêmica: os dados ficam nesta sessão
+                do navegador e não são enviados para um servidor.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <a href="#" class="brand">
+                ✦ conecta<span>estágios</span>
+            </a>
+
+            <p>
+                Conectando talentos a novas oportunidades.
+            </p>
+
+            <span>© 2026 Conecta Estágios</span>
+        </div>
+    </footer>
+
+    <!-- Arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
