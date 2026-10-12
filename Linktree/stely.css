@@ -1,0 +1,270 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101010;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: radial-gradient(
+        circle at top,
+        rgba(193, 151, 75, 0.12),
+        transparent 40%
+    );
+}
+
+/* PERFIL DA BARBEARIA */
+.profile {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #c9a45c;
+    border-radius: 50%;
+    background: #1b1b1b;
+    color: #d4af67;
+    font-size: 40px;
+
+    box-shadow: 0 0 25px rgba(201, 164, 92, 0.15);
+}
+
+.subtitle {
+    color: #c9a45c;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+h1 {
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+h1 span,
+.services h2 span {
+    color: #d4af67;
+}
+
+.description {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #bdbdbd;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* REDES SOCIAIS */
+.social-links a {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #383838;
+    border-radius: 50%;
+
+    color: #d4af67;
+    background: #1b1b1b;
+
+    text-decoration: none;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #d4af67;
+    color: #101010;
+    transform: translateY(-4px);
+}
+
+/* BOTÕES DOS LINKS */
+.links {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.link-button {
+    min-height: 78px;
+    padding: 15px 18px;
+    gap: 15px;
+
+    border: 1px solid #39352c;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #202020,
+        #171717
+    );
+
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.link-button:hover {
+    border-color: #d4af67;
+    background: #28241d;
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+.link-button:focus-visible,
+.social-links a:focus-visible {
+    outline: 2px solid #d4af67;
+    outline-offset: 4px;
+}
+
+.link-icon {
+    width: 35px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 23px;
+    color: #d4af67;
+}
+
+.link-button span {
+    flex: 1;
+}
+
+.link-button strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.link-button small {
+    display: block;
+    color: #a8a8a8;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.arrow {
+    color: #c9a45c;
+    font-size: 13px;
+}
+
+/* SEÇÃO DE SERVIÇOS */
+.services {
+    max-width: 700px;
+    scroll-margin-top: 25px;
+}
+
+.services h2 {
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.service-card {
+    padding: 25px 15px;
+    background: #1b1b1b;
+
+    border: 1px solid #39352c;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: #c9a45c;
+    transform: translateY(-4px);
+}
+
+.service-card i {
+    display: block;
+    color: #d4af67;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.service-card p {
+    font-size: 12px;
+    color: #a8a8a8;
+    line-height: 1.6;
+}
+
+/* RODAPÉ */
+.footer-name {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #d4af67;
+}
+
+.footer-address,
+.footer-phone {
+    margin-top: 12px;
+    color: #bdbdbd;
+    font-size: 13px;
+}
+
+footer small {
+    display: block;
+    margin-top: 12px;
+    color: #8d8d8d;
+}
+
+.gold-line {
+    width: 60px;
+    height: 2px;
+    background: #d4af67;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 480px) {
+    main.container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .link-button {
+        padding: 13px;
+        gap: 10px;
+    }
+
+    .link-button strong {
+        font-size: 14px;
+    }
+
+    .link-button small {
+        font-size: 11px;
+    }
+
+    .link-icon {
+        width: 28px;
+        font-size: 20px;
+    }
+
+    .arrow {
+        font-size: 11px;
+    }
+}
